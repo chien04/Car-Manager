@@ -1,0 +1,30 @@
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{[%d] %-5p %c - %m%n}" disableAnsi="false"/>
+        </Console>
+
+        <File name="LogFile" fileName="log/apps.log">
+            <PatternLayout pattern="[%d] %-5p %c - %m%n"/>
+        </File>
+
+        <RollingFile name="RollingFile" fileName="log/rolling.log"
+                     filePattern="log/rollingLog_%d{dd-MM-yyyy}_%i.log">
+            <PatternLayout pattern="[%d] %-5p %c - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="20 MB" />
+<!--                <CronTriggeringPolicy schedule=""/>-->
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="LogFile"/>
+            <AppenderRef ref="RollingFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

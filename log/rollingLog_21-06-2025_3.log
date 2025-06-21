@@ -1,0 +1,33 @@
+[2025-06-21 11:09:23,713] ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:232)
+
+The following method did not exist:
+
+    'void org.apache.logging.log4j.util.PropertiesUtil.addPropertySource(org.apache.logging.log4j.util.PropertySource)'
+
+The calling method's class, org.springframework.boot.logging.log4j2.Log4J2LoggingSystem, was loaded from the following location:
+
+    jar:file:/C:/Users/chien/.m2/repository/org/springframework/boot/spring-boot/3.5.0/spring-boot-3.5.0.jar!/org/springframework/boot/logging/log4j2/Log4J2LoggingSystem.class
+
+The called method's class, org.apache.logging.log4j.util.PropertiesUtil, is available from the following locations:
+
+    jar:file:/C:/Users/chien/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.0/log4j-api-2.17.0.jar!/org/apache/logging/log4j/util/PropertiesUtil.class
+
+The called method's class hierarchy was loaded from the following locations:
+
+    org.apache.logging.log4j.util.PropertiesUtil: file:/C:/Users/chien/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.0/log4j-api-2.17.0.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains compatible versions of the classes org.springframework.boot.logging.log4j2.Log4J2LoggingSystem and org.apache.logging.log4j.util.PropertiesUtil
+
