@@ -9,6 +9,8 @@ import com.example.order_service.entities.Car;
 import com.example.order_service.repository.BrandRepository;
 import com.example.order_service.repository.CarRepository;
 import lombok.AllArgsConstructor;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,8 @@ import java.util.List;
 @AllArgsConstructor
 public class CarServiceImpl implements CarService {
 
+    private static final Logger LOG = LogManager.getLogger(CarServiceImpl.class);
+
     @Autowired
     CarRepository carRepository;
 
@@ -27,9 +31,14 @@ public class CarServiceImpl implements CarService {
     @Override
     public CreateCarResponse createCar(CreateCarRequest request) {
         if(carRepository.existsByModel(request.getModel()) && brandRepository.existsById(request.getBrandId())) {
+            LOG.error("Tên xe và thương hiệu đã tồn tại");
             throw new RuntimeException("Car with this model and brand already exists");
         }
-        Brand brand = brandRepository.findById(request.getBrandId()).orElseThrow(() -> new RuntimeException("Brand not found"));
+        Brand brand = brandRepository.findById(request.getBrandId()).orElseThrow(() -> {
+            LOG.error("Không tìm thấy thương hiệu");
+            return new RuntimeException("Brand not found");
+        }
+        );
         Car car = new Car();
 
         car.setModel(request.getModel());
@@ -38,13 +47,18 @@ public class CarServiceImpl implements CarService {
         car.setBrand(brand);
 
         carRepository.save(car);
+        LOG.info("Thêm xe thành công");
         return new CreateCarResponse(car.getModel(), car.getPrice(), car.getAmount(),
                                         car.getBrand().getName(), car.getBrand().getCountry());
     }
 
     @Override
     public GetCarResponse getCar(int id) {
-        Car car = carRepository.findById(id).orElseThrow(() -> new RuntimeException("Car not found"));
+        Car car = carRepository.findById(id).orElseThrow(() -> {
+            LOG.error("Không tìm thấy xe có ID: {}", id);
+            return new RuntimeException("Car not found");
+        });
+        LOG.info("Xem thông tin xe với ID: {} thành công", id);
         return new GetCarResponse(car.getId(), car.getModel(), car.getPrice(), car.getAmount(), car.getBrand().getName());
     }
 
@@ -57,20 +71,27 @@ public class CarServiceImpl implements CarService {
             getCarResponses.add(new GetCarResponse(car.getId(), car.getModel(),
                     car.getPrice(), car.getAmount(), car.getBrand().getName()));
         }
+        LOG.info("Xem thông tin danh sách xe thành công");
         return getCarResponses;
     }
 
     @Override
     public void deleteCar(int id) {
-        Car car = carRepository.findById(id).orElseThrow(() -> new RuntimeException("Car not found"));
+        Car car = carRepository.findById(id).orElseThrow(() -> {
+            LOG.error("Không tìm thẫy xe có ID: {} để xoá", id);
+            return new RuntimeException("Car not found");
+        });
 
-
+        LOG.info("Xoá xe có ID: {} thành công", id);
         carRepository.delete(car);
     }
 
     @Override
     public void updateCar(UpdateCarRequest request, int id) {
-        Car car = carRepository.findById(id).orElseThrow(() -> new RuntimeException("Car not found"));
+        Car car = carRepository.findById(id).orElseThrow(() -> {
+            LOG.error("Không tìm thấy xe có ID: {} để cập nhật", id);
+            return new RuntimeException("Car not found");
+        });
         if(request.getModel() != null)
             car.setModel(request.getModel());
         if(request.getPrice() != 0)
@@ -78,5 +99,6 @@ public class CarServiceImpl implements CarService {
         if(request.getAmount() != 0)
             car.setAmount(request.getAmount());
         carRepository.save(car);
+        LOG.info("Cập nhật xe có ID: {} thành công", id);
     }
 }

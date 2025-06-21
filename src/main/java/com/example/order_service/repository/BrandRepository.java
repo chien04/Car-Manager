@@ -8,4 +8,7 @@ import java.util.Optional;
 
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, Integer> {
+    boolean existsByName(String name);
+
+    boolean existsByCountry(String country);
 }

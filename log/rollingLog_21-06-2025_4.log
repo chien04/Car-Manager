@@ -1,24 +1,24 @@
-[2025-06-21 11:14:21,740] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-[2025-06-21 11:14:21,784] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.7 with PID 9652 (D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service\target\classes started by chien in D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service)
-[2025-06-21 11:14:21,788] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
-[2025-06-21 11:14:21,828] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2025-06-21 11:14:21,828] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2025-06-21 11:14:22,517] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2025-06-21 11:14:22,573] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 4 JPA repository interfaces.
-[2025-06-21 11:14:23,173] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-[2025-06-21 11:14:23,189] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[2025-06-21 11:14:23,193] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-[2025-06-21 11:14:23,193] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-[2025-06-21 11:14:23,248] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[2025-06-21 11:14:23,250] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1420 ms
-[2025-06-21 11:14:23,414] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2025-06-21 11:14:23,490] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
-[2025-06-21 11:14:23,529] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-[2025-06-21 11:14:23,820] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2025-06-21 11:14:23,856] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[2025-06-21 11:14:24,143] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65a89e06
-[2025-06-21 11:14:24,145] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[2025-06-21 11:14:24,225] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+[2025-06-21 11:30:22,620] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+[2025-06-21 11:30:22,674] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.7 with PID 12400 (D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service\target\classes started by chien in D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service)
+[2025-06-21 11:30:22,678] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[2025-06-21 11:30:22,718] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2025-06-21 11:30:22,718] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2025-06-21 11:30:23,363] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2025-06-21 11:30:23,425] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+[2025-06-21 11:30:23,991] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[2025-06-21 11:30:24,007] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2025-06-21 11:30:24,010] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2025-06-21 11:30:24,010] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+[2025-06-21 11:30:24,061] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2025-06-21 11:30:24,063] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1342 ms
+[2025-06-21 11:30:24,231] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2025-06-21 11:30:24,334] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+[2025-06-21 11:30:24,373] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[2025-06-21 11:30:24,642] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2025-06-21 11:30:24,676] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2025-06-21 11:30:25,012] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33e90046
+[2025-06-21 11:30:25,013] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2025-06-21 11:30:25,089] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.1
@@ -26,17 +26,21 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-[2025-06-21 11:14:25,052] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2025-06-21 11:14:25,133] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2025-06-21 11:14:25,481] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2025-06-21 11:14:26,030] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[2025-06-21 11:14:26,041] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[2025-06-21 11:14:26,070] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-[2025-06-21 11:14:26,078] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 4.622 seconds (process running for 5.427)
-[2025-06-21 11:14:26,081] INFO  com.example.order_service.OrderServiceApplication - Log4j2 hoạt động rồi!
-[2025-06-21 11:14:26,081] ERROR com.example.order_service.OrderServiceApplication - Lỗi thử nghiệm
-[2025-06-21 11:29:50,787] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-[2025-06-21 11:29:50,797] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-[2025-06-21 11:29:50,802] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2025-06-21 11:29:50,805] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[2025-06-21 11:29:50,811] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2025-06-21 11:30:25,884] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2025-06-21 11:30:25,955] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2025-06-21 11:30:26,304] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2025-06-21 11:30:26,850] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2025-06-21 11:30:26,861] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2025-06-21 11:30:26,888] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[2025-06-21 11:30:26,895] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 4.545 seconds (process running for 5.317)
+[2025-06-21 11:30:26,898] INFO  com.example.order_service.OrderServiceApplication - Log4j2 hoạt động rồi!
+[2025-06-21 11:30:26,899] ERROR com.example.order_service.OrderServiceApplication - Lỗi thử nghiệm
+[2025-06-21 11:30:26,899] INFO  com.example.order_service.OrderServiceApplication - info
+[2025-06-21 11:30:26,899] WARN  com.example.order_service.OrderServiceApplication - warn
+[2025-06-21 11:30:26,899] ERROR com.example.order_service.OrderServiceApplication - error
+[2025-06-21 11:30:26,899] FATAL com.example.order_service.OrderServiceApplication - fatal
+[2025-06-21 11:30:46,340] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-06-21 11:30:46,350] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[2025-06-21 11:30:46,354] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2025-06-21 11:30:46,356] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2025-06-21 11:30:46,361] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

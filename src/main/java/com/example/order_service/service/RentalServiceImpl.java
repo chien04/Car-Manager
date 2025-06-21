@@ -29,10 +29,11 @@ public class RentalServiceImpl implements RentalService{
     @Override
     public GetRentalResponse getRental(int id) {
         Rental rental = rentalRepository.findById(id).orElseThrow(() -> {
-
+            LOG.error("Không tìm thấy mục cho thuê có ID: {}", id);
             return new RuntimeException("Rental not found");
         }
         );
+        LOG.info("Thuê ô tô thành công");
         return new GetRentalResponse(rental.getId(),
                 rental.getRentalDate(), rental.getRentalDays(),
                 rental.getReturnDate(), rental.getUser().getUserName(),
@@ -49,18 +50,27 @@ public class RentalServiceImpl implements RentalService{
                     rental.getReturnDate(), rental.getUser().getUserName(),
                     rental.getCar().getModel(), rental.getTotalPrice()));
         }
+        LOG.info("Lấy danh sách các mục cho thuê thành công");
         return getRentalResponses;
     }
 
     @Override
     public void rentCar(CreateRentalRequest request) {
         User user = userRepository.findById(request.getUserId())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> {
+                    LOG.error("Không tìm thấy người dùng muốn thuê xe có ID: {}", request.getUserId());
+                    return new RuntimeException("User not found");
+                });
 
         Car car = carRepository.findById(request.getCarId())
-                .orElseThrow(() -> new RuntimeException("Car not found"));
+                .orElseThrow(() -> {
+                    LOG.error("Không tìm thấy xe muốn được được thuê có ID: {}", request.getCarId());
+                    return new RuntimeException("Car not found");
+                }
+                );
 
         if(car.getAmount() < 0) {
+            LOG.error("Loại xe này hiện tại không có sẵn!");
             throw new RuntimeException("Car is not available");
         }
 
@@ -75,7 +85,7 @@ public class RentalServiceImpl implements RentalService{
 
         car.setAmount(car.getAmount() - 1);
         carRepository.save(car);
-
+        LOG.info("Thuê xe thành công");
 
     }
 }
