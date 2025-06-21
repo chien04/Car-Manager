@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.time.LocalDate;
 
+/**
+ * DTO dùng để nhận dữ liệu khi tạo mới một mục cho thuê.
+ */
 @Getter
 public class CreateRentalRequest {
     private int userId;

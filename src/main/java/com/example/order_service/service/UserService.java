@@ -8,6 +8,9 @@ import com.example.order_service.entities.User;
 
 import java.util.List;
 
+/**
+ * Interface định nghĩa các chức năng xử lý nghiệp vụ liên quan đến User (người dùng).
+ */
 public interface UserService {
     CreateUserResponse createUser(CreateUserRequest userRequest);
 

@@ -17,80 +17,112 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Triển khai các nghiệp vụ xử lý liên quan đến người dùng (User).
+ * Gồm tạo, lấy, cập nhật, xoá người dùng và hiển thị các lượt thuê xe của họ.
+ */
 @Service
 @AllArgsConstructor
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private static final Logger LOG = LogManager.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UserRepository userRepository;
 
-
+    /**
+     * Tạo mới một người dùng nếu chưa tồn tại username.
+     *
+     * @param userRequest thông tin người dùng cần tạo
+     * @return phản hồi chứa tên người dùng mới tạo
+     */
     public CreateUserResponse createUser(CreateUserRequest userRequest) {
-
-        if(userRepository.existsByUserName(userRequest.getUserName())) {
+        if (userRepository.existsByUserName(userRequest.getUserName())) {
             LOG.error("Tên người dùng đã tồn tại");
             throw new RuntimeException("Tên người dùng đã tồn tại");
         }
+
         User user = new User();
         user.setUserName(userRequest.getUserName());
         user.setPassword(userRequest.getPassword());
+
         userRepository.save(user);
         LOG.info("Tạo người dùng thành công");
+
         return new CreateUserResponse(user.getUserName());
     }
 
+    /**
+     * Lấy danh sách tất cả người dùng, kèm theo danh sách các lượt thuê của họ.
+     *
+     * @return danh sách phản hồi người dùng và lượt thuê
+     */
     @Override
     public List<GetUserResponse> getUsers() {
-
         List<User> users = userRepository.findAll();
         List<GetUserResponse> userResponses = new ArrayList<>();
 
-        for (User user: users){
+        for (User user : users) {
             List<RentalDTO> rentalDTOS = new ArrayList<>();
-            for (Rental rental: user.getRentals()){
-                rentalDTOS.add(new RentalDTO(rental.getId(),
+            for (Rental rental : user.getRentals()) {
+                rentalDTOS.add(new RentalDTO(
+                        rental.getId(),
                         rental.getCar().getModel(),
                         rental.getRentalDate(),
                         rental.getRentalDays(),
                         rental.getReturnDate(),
-                        rental.getTotalPrice()));
+                        rental.getTotalPrice()
+                ));
             }
             userResponses.add(new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS));
         }
+
         LOG.info("Lấy danh sách người dùng thành công");
         return userResponses;
     }
 
+    /**
+     * Lấy thông tin chi tiết người dùng theo ID, kèm danh sách lượt thuê của họ.
+     *
+     * @param id ID người dùng
+     * @return phản hồi thông tin người dùng và các lượt thuê
+     */
     @Override
     public GetUserResponse getUser(int id) {
         User user = userRepository.findById(id).orElseThrow(() -> {
             LOG.error("Không tồn tại người dùng có ID: {}", id);
-            return new RuntimeException("Không ồn tại người dùng");
+            return new RuntimeException("Không tồn tại người dùng");
         });
 
         List<RentalDTO> rentalDTOS = new ArrayList<>();
-        for (Rental rental: user.getRentals()){
-            rentalDTOS.add(new RentalDTO(rental.getId(),
+        for (Rental rental : user.getRentals()) {
+            rentalDTOS.add(new RentalDTO(
+                    rental.getId(),
                     rental.getCar().getModel(),
                     rental.getRentalDate(),
                     rental.getRentalDays(),
                     rental.getReturnDate(),
-                    rental.getTotalPrice()));
+                    rental.getTotalPrice()
+            ));
         }
+
         LOG.info("Lấy người dùng có ID: {} thành công", id);
         return new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS);
     }
 
+    /**
+     * Cập nhật thông tin người dùng theo ID.
+     *
+     * @param request thông tin cần cập nhật
+     * @param id      ID người dùng cần cập nhật
+     */
     @Override
     public void updateUser(UpdateUserRequest request, int id) {
-        User user = userRepository.findById(id).orElseThrow(
-                () -> {
-                    LOG.error("Không tìm thấy người dùng có ID: {}", id);
-                    return new RuntimeException("Không tìm thấy người dùng");
-                }
-        );
+        User user = userRepository.findById(id).orElseThrow(() -> {
+            LOG.error("Không tìm thấy người dùng có ID: {}", id);
+            return new RuntimeException("Không tìm thấy người dùng");
+        });
+
         user.setUserName(request.getUserName());
         user.setPassword(request.getPassword());
 
@@ -98,18 +130,19 @@ public class UserServiceImpl implements UserService{
         LOG.info("Cập nhật người dùng có ID: {} thành công", id);
     }
 
+    /**
+     * Xoá người dùng theo ID nếu tồn tại.
+     *
+     * @param id ID người dùng cần xoá
+     */
     @Override
     public void deleteUser(int id) {
-        User user = userRepository.findById(id).orElseThrow(
-                () -> {
-                    LOG.error("Không tìm thấy người dùng có ID: {}", id);
-                    return new RuntimeException("Không tìm thấy người dùng");
-                }
-        );
+        User user = userRepository.findById(id).orElseThrow(() -> {
+            LOG.error("Không tìm thấy người dùng có ID: {}", id);
+            return new RuntimeException("Không tìm thấy người dùng");
+        });
 
         userRepository.delete(user);
         LOG.info("Xoá thành công người dùng có ID: {}", id);
     }
-
-
 }

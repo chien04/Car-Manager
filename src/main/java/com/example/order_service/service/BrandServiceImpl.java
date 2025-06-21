@@ -15,19 +15,32 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Triển khai các nghiệp vụ xử lý liên quan đến Brand (hãng xe).
+ * Bao gồm tạo, cập nhật, truy xuất, xoá brand và log hoạt động tương ứng.
+ */
 @Service
 @AllArgsConstructor
-public class BrandServiceImpl implements BrandService{
+public class BrandServiceImpl implements BrandService {
 
     private static final Logger LOG = LogManager.getLogger(BrandServiceImpl.class);
+
     @Autowired
-    BrandRepository brandRepository;
+    private BrandRepository brandRepository;
+
+    /**
+     * Tạo một brand mới nếu chưa tồn tại theo tên và quốc gia.
+     *
+     * @param request yêu cầu tạo brand
+     * @return phản hồi chứa thông tin brand mới
+     */
     @Override
     public CreateBrandResponse createBrand(CreateBrandRequest request) {
-        if(brandRepository.existsByName(request.getName()) && brandRepository.existsByCountry(request.getCountry())){
+        if (brandRepository.existsByName(request.getName()) && brandRepository.existsByCountry(request.getCountry())) {
             LOG.error("Tên thương hiệu {} của quốc gia {} đã tồn tại", request.getName(), request.getCountry());
             throw new RuntimeException("Tên thương hiệu và quốc gia đã tồn tại");
         }
+
         Brand brand = new Brand();
         brand.setName(request.getName());
         brand.setCountry(request.getCountry());
@@ -37,10 +50,16 @@ public class BrandServiceImpl implements BrandService{
         return new CreateBrandResponse(brand.getName(), brand.getCountry());
     }
 
+    /**
+     * Cập nhật thông tin của một brand dựa theo ID.
+     *
+     * @param request yêu cầu cập nhật brand
+     * @param id      ID của brand cần cập nhật
+     * @return brand sau khi được cập nhật
+     */
     @Override
     public Brand updateBrand(UpdateBrandRequest request, int id) {
-        Brand brand = brandRepository.findById(id).orElseThrow(() ->
-        {
+        Brand brand = brandRepository.findById(id).orElseThrow(() -> {
             LOG.error("Không tìm thấy thương hiệu có ID: {} để cập nhật", id);
             return new RuntimeException("Không tìm thấy thương hiệu để cập nhật");
         });
@@ -53,6 +72,12 @@ public class BrandServiceImpl implements BrandService{
         return brand;
     }
 
+    /**
+     * Truy xuất thông tin chi tiết của một brand theo ID.
+     *
+     * @param id ID của brand
+     * @return đối tượng phản hồi chứa thông tin brand
+     */
     @Override
     public GetBrandResponse getBrand(int id) {
         Brand brand = brandRepository.findById(id).orElseThrow(() -> {
@@ -63,6 +88,11 @@ public class BrandServiceImpl implements BrandService{
         return new GetBrandResponse(brand.getId(), brand.getName(), brand.getCountry());
     }
 
+    /**
+     * Truy xuất danh sách tất cả các brand.
+     *
+     * @return danh sách phản hồi chứa thông tin brand
+     */
     @Override
     public List<GetBrandResponse> getBrands() {
         List<GetBrandResponse> getBrandResponses = new ArrayList<>();
@@ -74,10 +104,14 @@ public class BrandServiceImpl implements BrandService{
         return getBrandResponses;
     }
 
+    /**
+     * Xoá một brand theo ID nếu tồn tại.
+     *
+     * @param id ID của brand cần xoá
+     */
     @Override
-    public void deleteBrand(int id){
-        Brand brand = brandRepository.findById(id).orElseThrow(() ->
-        {
+    public void deleteBrand(int id) {
+        Brand brand = brandRepository.findById(id).orElseThrow(() -> {
             LOG.error("Không tìm thấy thương hiệu có ID: {} để xoá", id);
             return new RuntimeException("Không tìm thấy thương hiệu để xoá");
         });

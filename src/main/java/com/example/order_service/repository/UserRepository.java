@@ -6,6 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+/**
+ * Repository cho thực thể User.
+ * Cung cấp sẵn các phương thức CRUD từ JpaRepository và thêm các truy vấn tùy chỉnh.
+ */
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
     boolean existsByUserName(String userName);

@@ -10,6 +10,9 @@ import com.example.order_service.entities.Brand;
 
 import java.util.List;
 
+/**
+ * Interface định nghĩa các chức năng xử lý nghiệp vụ liên quan đến Brand (hãng xe).
+ */
 public interface BrandService {
     CreateBrandResponse createBrand(CreateBrandRequest request);
 
