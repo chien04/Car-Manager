@@ -9,9 +9,10 @@ public class Config implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Áp dụng cho tất cả các API
-                .allowedOrigins("http://localhost:5173") // React app URL
-                .allowedMethods("GET", "POST", "PUT", "DELETE") // Cho phép method
-                .allowedHeaders("*"); // Cho phép tất cả header
+        registry.addMapping("/**")
+                .allowedOrigins("https://car-manager-front-krgl910po.vercel.app") // 🎯 CHỈ định đúng domain frontend
+                .allowedMethods("*")
+                .allowedHeaders("*")
+                .allowCredentials(true); // Nếu có dùng cookie hoặc auth
     }
 }
