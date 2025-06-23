@@ -1,0 +1,40 @@
+[2025-06-23 09:05:24,509] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+[2025-06-23 09:05:24,571] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.7 with PID 19520 (D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service\target\classes started by chien in D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service)
+[2025-06-23 09:05:24,575] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[2025-06-23 09:05:24,623] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2025-06-23 09:05:24,623] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2025-06-23 09:05:25,430] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2025-06-23 09:05:25,496] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+[2025-06-23 09:05:26,140] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[2025-06-23 09:05:26,154] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2025-06-23 09:05:26,157] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2025-06-23 09:05:26,157] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+[2025-06-23 09:05:26,209] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2025-06-23 09:05:26,210] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1586 ms
+[2025-06-23 09:05:26,385] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2025-06-23 09:05:26,459] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+[2025-06-23 09:05:26,500] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[2025-06-23 09:05:26,800] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2025-06-23 09:05:26,837] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2025-06-23 09:05:27,202] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77d2f0e1
+[2025-06-23 09:05:27,203] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2025-06-23 09:05:27,283] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2025-06-23 09:05:28,119] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2025-06-23 09:05:28,189] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2025-06-23 09:05:28,591] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2025-06-23 09:05:29,228] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2025-06-23 09:05:29,243] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2025-06-23 09:05:29,266] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[2025-06-23 09:05:29,281] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 5.118 seconds (process running for 6.109)
+[2025-06-23 09:29:17,594] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-06-23 09:29:17,605] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[2025-06-23 09:29:17,610] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2025-06-23 09:29:17,613] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2025-06-23 09:29:17,619] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
