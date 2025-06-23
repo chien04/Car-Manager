@@ -5,6 +5,6 @@ RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
-COPY --from=build /app/target/DrComputer-0.0.1-SNAPSHOT.war app.war
+COPY --from=build /app/target/BackEnd-0.0.1-SNAPSHOT.war app.war
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.war"]
