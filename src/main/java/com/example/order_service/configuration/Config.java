@@ -10,7 +10,7 @@ public class Config implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://car-manager-front-krgl910po.vercel.app") // 🎯 CHỈ định đúng domain frontend
+                .allowedOrigins("*") // 🎯 CHỈ định đúng domain frontend
                 .allowedMethods("*")
                 .allowedHeaders("*")
                 .allowCredentials(true); // Nếu có dùng cookie hoặc auth
