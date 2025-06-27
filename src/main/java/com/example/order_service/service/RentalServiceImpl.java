@@ -11,6 +11,7 @@ import com.example.order_service.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -92,9 +93,10 @@ public class RentalServiceImpl implements RentalService {
      */
     @Override
     public void rentCar(CreateRentalRequest request) {
-        User user = userRepository.findById(request.getUserId())
+        String userName = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userRepository.findByUserName(userName)
                 .orElseThrow(() -> {
-                    LOG.error("Không tìm thấy người dùng muốn thuê xe có ID: {}", request.getUserId());
+                    LOG.error("Không tìm thấy người dùng muốn thuê xe có tên: {}", userName);
                     return new RuntimeException("User not found");
                 });
 

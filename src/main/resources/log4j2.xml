@@ -8,23 +8,23 @@
             <PatternLayout pattern="[%d] %-5p %c - %m%n"/>
         </File>
 
-        <RollingFile name="RollingFile" fileName="log/rolling.log"
-                     filePattern="log/rollingLog_%d{dd-MM-yyyy}_%i.log">
-            <PatternLayout pattern="[%d] %-5p %c - %m%n"/>
-            <Policies>
-                <TimeBasedTriggeringPolicy interval="1"/>
-                <OnStartupTriggeringPolicy />
-                <SizeBasedTriggeringPolicy size="20 MB" />
-<!--                <CronTriggeringPolicy schedule=""/>-->
-            </Policies>
-        </RollingFile>
+<!--        <RollingFile name="RollingFile" fileName="log/rolling.log"-->
+<!--                     filePattern="log/rollingLog_%d{dd-MM-yyyy}_%i.log">-->
+<!--            <PatternLayout pattern="[%d] %-5p %c - %m%n"/>-->
+<!--            <Policies>-->
+<!--                <TimeBasedTriggeringPolicy interval="1"/>-->
+<!--                <OnStartupTriggeringPolicy />-->
+<!--                <SizeBasedTriggeringPolicy size="20 MB" />-->
+<!--&lt;!&ndash;                <CronTriggeringPolicy schedule=""/>&ndash;&gt;-->
+<!--            </Policies>-->
+<!--        </RollingFile>-->
     </Appenders>
 
     <Loggers>
         <Root level="info">
             <AppenderRef ref="STDOUT"/>
             <AppenderRef ref="LogFile"/>
-            <AppenderRef ref="RollingFile"/>
+<!--            <AppenderRef ref="RollingFile"/>-->
         </Root>
     </Loggers>
 </Configuration>

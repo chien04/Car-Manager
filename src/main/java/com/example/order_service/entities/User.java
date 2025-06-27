@@ -11,6 +11,7 @@ import java.util.List;
  */
 @Data
 @Entity
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
@@ -23,6 +24,7 @@ public class User {
     private int id;
     private String userName;
     private String password;
+    private USER_ROLE role = USER_ROLE.ROLE_CUSTOMER;
 
     /**
      * Danh sách các lượt thuê xe của người dùng.

@@ -10,7 +10,6 @@ import java.time.LocalDate;
  */
 @Getter
 public class CreateRentalRequest {
-    private int userId;
     private int carId;
     private LocalDate rentalDate;
     private int rentalDays;

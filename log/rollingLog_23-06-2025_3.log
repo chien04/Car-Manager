@@ -1,39 +1,39 @@
-[2025-06-23 14:23:38,417] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
-[2025-06-23 14:23:38,466] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.7 with PID 12600 (D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service\target\classes started by chien in D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service)
-[2025-06-23 14:23:38,471] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
-[2025-06-23 14:23:38,472] DEBUG org.springframework.boot.SpringApplication - Loading source class com.example.order_service.OrderServiceApplication
-[2025-06-23 14:23:38,513] DEBUG org.springframework.boot.devtools.restart.ChangeableUrls - Matching URLs for reloading : [file:/D:/tailieu/Ki_2-Nam_3/Intern/SpringBoot/order_service/target/classes/]
-[2025-06-23 14:23:38,513] DEBUG org.springframework.boot.devtools.settings.DevToolsSettings - Included patterns for restart : []
-[2025-06-23 14:23:38,513] DEBUG org.springframework.boot.devtools.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
-[2025-06-23 14:23:38,514] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2025-06-23 14:23:38,514] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2025-06-23 14:23:38,515] DEBUG org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45817dd5
-[2025-06-23 14:23:39,327] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2025-06-23 14:23:39,345] DEBUG org.springframework.boot.autoconfigure.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.order_service'. Automatic @Repository and @Entity scanning is enabled.
-[2025-06-23 14:23:39,392] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
-[2025-06-23 14:23:39,973] DEBUG org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory - Code archive: C:\Users\chien\.m2\repository\org\springframework\boot\spring-boot\3.5.0\spring-boot-3.5.0.jar
-[2025-06-23 14:23:39,974] DEBUG org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory - Code archive: C:\Users\chien\.m2\repository\org\springframework\boot\spring-boot\3.5.0\spring-boot-3.5.0.jar
-[2025-06-23 14:23:39,974] DEBUG org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
-[2025-06-23 14:23:40,023] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-[2025-06-23 14:23:40,037] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-[2025-06-23 14:23:40,039] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
-[2025-06-23 14:23:40,040] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
-[2025-06-23 14:23:40,094] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-[2025-06-23 14:23:40,094] DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
-[2025-06-23 14:23:40,096] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1579 ms
-[2025-06-23 14:23:40,110] DEBUG org.springframework.boot.web.servlet.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-[2025-06-23 14:23:40,110] DEBUG org.springframework.boot.web.servlet.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
-[2025-06-23 14:23:40,132] DEBUG org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
-[2025-06-23 14:23:40,134] DEBUG org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
-[2025-06-23 14:23:40,134] DEBUG org.springframework.boot.web.servlet.filter.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
-[2025-06-23 14:23:40,273] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2025-06-23 14:23:40,342] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
-[2025-06-23 14:23:40,379] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-[2025-06-23 14:23:40,668] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2025-06-23 14:23:40,700] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[2025-06-23 14:23:41,977] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72e2f198
-[2025-06-23 14:23:41,978] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[2025-06-23 14:23:42,266] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+[2025-06-23 14:29:57,274] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.2.Final
+[2025-06-23 14:29:57,320] INFO  com.example.order_service.OrderServiceApplication - Starting OrderServiceApplication using Java 21.0.7 with PID 31720 (D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service\target\classes started by chien in D:\tailieu\Ki_2-Nam_3\Intern\SpringBoot\order_service)
+[2025-06-23 14:29:57,324] INFO  com.example.order_service.OrderServiceApplication - No active profile set, falling back to 1 default profile: "default"
+[2025-06-23 14:29:57,325] DEBUG org.springframework.boot.SpringApplication - Loading source class com.example.order_service.OrderServiceApplication
+[2025-06-23 14:29:57,365] DEBUG org.springframework.boot.devtools.restart.ChangeableUrls - Matching URLs for reloading : [file:/D:/tailieu/Ki_2-Nam_3/Intern/SpringBoot/order_service/target/classes/]
+[2025-06-23 14:29:57,365] DEBUG org.springframework.boot.devtools.settings.DevToolsSettings - Included patterns for restart : []
+[2025-06-23 14:29:57,365] DEBUG org.springframework.boot.devtools.settings.DevToolsSettings - Excluded patterns for restart : [/spring-boot-starter-[\w-]+/, /spring-boot/(bin|build|out)/, /spring-boot-starter/(bin|build|out)/, /spring-boot-devtools/(bin|build|out)/, /spring-boot-actuator/(bin|build|out)/, /spring-boot-autoconfigure/(bin|build|out)/]
+[2025-06-23 14:29:57,365] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2025-06-23 14:29:57,366] INFO  org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2025-06-23 14:29:57,366] DEBUG org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@453ef474
+[2025-06-23 14:29:58,015] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2025-06-23 14:29:58,034] DEBUG org.springframework.boot.autoconfigure.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.example.order_service'. Automatic @Repository and @Entity scanning is enabled.
+[2025-06-23 14:29:58,080] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+[2025-06-23 14:29:58,614] DEBUG org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory - Code archive: C:\Users\chien\.m2\repository\org\springframework\boot\spring-boot\3.5.0\spring-boot-3.5.0.jar
+[2025-06-23 14:29:58,614] DEBUG org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory - Code archive: C:\Users\chien\.m2\repository\org\springframework\boot\spring-boot\3.5.0\spring-boot-3.5.0.jar
+[2025-06-23 14:29:58,615] DEBUG org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory - None of the document roots [src/main/webapp, public, static] point to a directory and will be ignored.
+[2025-06-23 14:29:58,665] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[2025-06-23 14:29:58,679] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[2025-06-23 14:29:58,683] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2025-06-23 14:29:58,683] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.41]
+[2025-06-23 14:29:58,735] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2025-06-23 14:29:58,735] DEBUG org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+[2025-06-23 14:29:58,736] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1369 ms
+[2025-06-23 14:29:58,750] DEBUG org.springframework.boot.web.servlet.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+[2025-06-23 14:29:58,750] DEBUG org.springframework.boot.web.servlet.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+[2025-06-23 14:29:58,770] DEBUG org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+[2025-06-23 14:29:58,772] DEBUG org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use
+[2025-06-23 14:29:58,772] DEBUG org.springframework.boot.web.servlet.filter.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+[2025-06-23 14:29:58,911] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2025-06-23 14:29:58,993] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+[2025-06-23 14:29:59,031] INFO  org.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[2025-06-23 14:29:59,305] INFO  org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2025-06-23 14:29:59,335] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2025-06-23 14:30:00,511] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70f31e02
+[2025-06-23 14:30:00,512] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2025-06-23 14:30:00,694] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 9.3
@@ -41,19 +41,19 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-[2025-06-23 14:23:43,084] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2025-06-23 14:23:44,076] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2025-06-23 14:23:44,438] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2025-06-23 14:23:44,644] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
-[2025-06-23 14:23:44,740] DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-[2025-06-23 14:23:44,768] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-[2025-06-23 14:23:44,840] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
-[2025-06-23 14:23:44,868] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 0 ResponseBodyAdvice
-[2025-06-23 14:23:45,032] DEBUG org.springframework.boot.devtools.livereload.LiveReloadServer - Starting live reload server on port 35729
-[2025-06-23 14:23:45,034] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
-[2025-06-23 14:23:45,046] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-[2025-06-23 14:23:45,065] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-[2025-06-23 14:23:45,077] DEBUG org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+[2025-06-23 14:30:01,514] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2025-06-23 14:30:02,340] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2025-06-23 14:30:02,693] WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2025-06-23 14:30:02,905] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+[2025-06-23 14:30:03,009] DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+[2025-06-23 14:30:03,031] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+[2025-06-23 14:30:03,096] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+[2025-06-23 14:30:03,127] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 0 ResponseBodyAdvice
+[2025-06-23 14:30:03,281] DEBUG org.springframework.boot.devtools.livereload.LiveReloadServer - Starting live reload server on port 35729
+[2025-06-23 14:30:03,283] INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[2025-06-23 14:30:03,294] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[2025-06-23 14:30:03,311] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+[2025-06-23 14:30:03,322] DEBUG org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
 
 
 ============================
@@ -1268,49 +1268,560 @@ Unconditional classes:
 
 
 
-[2025-06-23 14:23:45,084] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 6.99 seconds (process running for 7.996)
-[2025-06-23 14:23:45,085] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
-[2025-06-23 14:23:45,088] DEBUG org.springframework.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
-[2025-06-23 14:23:45,088] DEBUG org.springframework.boot.devtools.restart.Restarter - Immediately restarting application
-[2025-06-23 14:23:45,088] DEBUG org.springframework.boot.devtools.restart.Restarter - Starting application com.example.order_service.OrderServiceApplication with URLs [file:/D:/tailieu/Ki_2-Nam_3/Intern/SpringBoot/order_service/target/classes/]
-[2025-06-23 14:23:45,088] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-[2025-06-23 14:23:52,451] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2025-06-23 14:23:52,451] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[2025-06-23 14:23:52,451] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
-[2025-06-23 14:23:52,451] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
-[2025-06-23 14:23:52,452] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
-[2025-06-23 14:23:52,452] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@39c57da0
-[2025-06-23 14:23:52,453] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4d5a076f
-[2025-06-23 14:23:52,453] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-[2025-06-23 14:23:52,453] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-[2025-06-23 14:23:52,461] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
-[2025-06-23 14:23:52,471] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
-[2025-06-23 14:23:53,270] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
-[2025-06-23 14:23:54,911] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
-[2025-06-23 14:23:54,924] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-[2025-06-23 14:23:54,926] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
-[2025-06-23 14:23:54,966] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-[2025-06-23 14:24:02,959] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brand", parameters={}
-[2025-06-23 14:24:02,965] DEBUG org.springframework.web.servlet.handler.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-[2025-06-23 14:24:02,967] DEBUG org.springframework.web.servlet.resource.ResourceHttpRequestHandler - Resource not found
-[2025-06-23 14:24:02,970] DEBUG org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/brand.]
-[2025-06-23 14:24:02,970] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
-[2025-06-23 14:24:02,974] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
-[2025-06-23 14:24:02,975] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
-[2025-06-23 14:24:02,982] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-[2025-06-23 14:24:02,982] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Mon Jun 23 14:24:02 ICT 2025, status=404, error=Not Found, trace=org.springframework.web. (truncated)...]
-[2025-06-23 14:24:02,992] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
-[2025-06-23 14:24:06,027] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
-[2025-06-23 14:24:06,027] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
-[2025-06-23 14:24:06,204] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
-[2025-06-23 14:24:06,424] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
-[2025-06-23 14:24:06,425] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-[2025-06-23 14:24:06,428] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
-[2025-06-23 14:24:06,433] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
-[2025-06-23 14:29:52,967] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
-[2025-06-23 14:29:52,969] DEBUG org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@45817dd5, started on Mon Jun 23 14:23:38 ICT 2025
-[2025-06-23 14:29:52,970] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-[2025-06-23 14:29:52,983] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
-[2025-06-23 14:29:52,987] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2025-06-23 14:29:52,990] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[2025-06-23 14:29:53,078] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2025-06-23 14:30:03,329] INFO  com.example.order_service.OrderServiceApplication - Started OrderServiceApplication in 6.348 seconds (process running for 7.212)
+[2025-06-23 14:30:03,330] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state LivenessState changed to CORRECT
+[2025-06-23 14:30:03,333] DEBUG org.springframework.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[#1,main,5,main]
+[2025-06-23 14:30:03,333] DEBUG org.springframework.boot.devtools.restart.Restarter - Immediately restarting application
+[2025-06-23 14:30:03,333] DEBUG org.springframework.boot.devtools.restart.Restarter - Starting application com.example.order_service.OrderServiceApplication with URLs [file:/D:/tailieu/Ki_2-Nam_3/Intern/SpringBoot/order_service/target/classes/]
+[2025-06-23 14:30:03,335] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+[2025-06-23 14:33:59,241] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2025-06-23 14:33:59,241] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[2025-06-23 14:33:59,241] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+[2025-06-23 14:33:59,241] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+[2025-06-23 14:33:59,241] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+[2025-06-23 14:33:59,242] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@c688167
+[2025-06-23 14:33:59,243] DEBUG org.springframework.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@76592f7f
+[2025-06-23 14:33:59,243] DEBUG org.springframework.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+[2025-06-23 14:33:59,243] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+[2025-06-23 14:33:59,252] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:33:59,264] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:33:59,624] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:33:59,937] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:33:59,945] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:33:59,947] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:33:59,979] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:33:59,981] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:33:59,981] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:34:00,117] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:34:00,400] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:34:00,401] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:00,401] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:34:00,402] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:08,544] DEBUG org.springframework.web.servlet.DispatcherServlet - OPTIONS "/api/v1/users", parameters={}
+[2025-06-23 14:34:08,544] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#createUser(CreateUserRequest)
+[2025-06-23 14:34:08,546] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:08,563] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/users", parameters={}
+[2025-06-23 14:34:08,563] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#createUser(CreateUserRequest)
+[2025-06-23 14:34:08,585] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateUserRequest@4897a31f]
+[2025-06-23 14:34:08,609] DEBUG org.hibernate.SQL - select u1_0.id from user u1_0 where u1_0.user_name=? limit ?
+[2025-06-23 14:34:09,012] DEBUG org.hibernate.SQL - select next_val as id_val from user_seq for update
+[2025-06-23 14:34:09,069] DEBUG org.hibernate.SQL - update user_seq set next_val= ? where next_val=?
+[2025-06-23 14:34:09,298] DEBUG org.hibernate.SQL - insert into user (password,user_name,id) values (?,?,?)
+[2025-06-23 14:34:09,676] INFO  com.example.order_service.service.UserServiceImpl - Tạo người dùng thành công
+[2025-06-23 14:34:09,678] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:09,681] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateUserResponse[userName=ffff]]
+[2025-06-23 14:34:09,682] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:09,685] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:34:09,685] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:34:09,812] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:34:10,050] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:34:10,104] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:34:10,104] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:10,107] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=1, username=ffff, rentalDTOS=[]]]]
+[2025-06-23 14:34:10,113] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:17,811] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:34:17,811] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:34:18,241] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:34:18,300] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:18,633] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:34:18,633] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:18,642] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan]]]
+[2025-06-23 14:34:18,644] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:18,646] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:34:18,650] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:34:18,912] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:34:18,980] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:19,609] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:34:19,610] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:19,610] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan]]]
+[2025-06-23 14:34:19,611] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:28,757] DEBUG org.springframework.web.servlet.DispatcherServlet - OPTIONS "/api/v1/cars", parameters={}
+[2025-06-23 14:34:28,757] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#createCar(CreateCarRequest)
+[2025-06-23 14:34:28,758] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:28,760] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/cars", parameters={}
+[2025-06-23 14:34:28,760] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#createCar(CreateCarRequest)
+[2025-06-23 14:34:28,764] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateCarRequest@7454b45]
+[2025-06-23 14:34:28,766] DEBUG org.hibernate.SQL - select c1_0.id from car c1_0 where c1_0.model=? limit ?
+[2025-06-23 14:34:32,872] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:33,958] ERROR com.example.order_service.service.CarServiceImpl - Không tìm thấy thương hiệu
+[2025-06-23 14:34:33,961] DEBUG org.springframework.web.servlet.DispatcherServlet - Failed to complete request: java.lang.RuntimeException: Brand not found
+[2025-06-23 14:34:33,962] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Brand not found] with root cause
+java.lang.RuntimeException: Brand not found
+	at com.example.order_service.service.CarServiceImpl.lambda$createCar$0(CarServiceImpl.java:51) ~[classes/:?]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at com.example.order_service.service.CarServiceImpl.createCar(CarServiceImpl.java:49) ~[classes/:?]
+	at com.example.order_service.controller.CarController.createCar(CarController.java:43) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.41.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.41.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[2025-06-23 14:34:33,982] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+[2025-06-23 14:34:33,984] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2025-06-23 14:34:33,992] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:33,992] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Mon Jun 23 14:34:33 ICT 2025, status=500, error=Internal Server Error, trace=java.lang.Ru (truncated)...]
+[2025-06-23 14:34:34,002] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+[2025-06-23 14:34:37,797] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:34:37,797] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:34:38,028] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:34:38,288] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:34:38,289] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:38,289] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:34:38,292] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:38,293] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:34:38,294] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:34:38,435] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:34:38,676] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:34:38,677] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:38,677] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:34:38,679] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:43,293] DEBUG org.springframework.web.servlet.DispatcherServlet - OPTIONS "/api/v1/brands", parameters={}
+[2025-06-23 14:34:43,293] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#createBrand(CreateBrandRequest)
+[2025-06-23 14:34:43,294] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:43,297] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/brands", parameters={}
+[2025-06-23 14:34:43,297] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#createBrand(CreateBrandRequest)
+[2025-06-23 14:34:43,299] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateBrandRequest@7ce63cc0]
+[2025-06-23 14:34:43,300] DEBUG org.hibernate.SQL - select b1_0.id from brand b1_0 where b1_0.name=? limit ?
+[2025-06-23 14:34:43,651] DEBUG org.hibernate.SQL - select next_val as id_val from brand_seq for update
+[2025-06-23 14:34:43,703] DEBUG org.hibernate.SQL - update brand_seq set next_val= ? where next_val=?
+[2025-06-23 14:34:43,966] DEBUG org.hibernate.SQL - insert into brand (country,name,id) values (?,?,?)
+[2025-06-23 14:34:44,187] INFO  com.example.order_service.service.BrandServiceImpl - Thêm thương hiệu 44 của quốc gia 44 thành công
+[2025-06-23 14:34:44,188] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:44,190] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateBrandResponse[brand=44, country=44]]
+[2025-06-23 14:34:44,191] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:44,195] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:34:44,195] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:34:44,319] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:34:44,574] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:34:44,575] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:44,575] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:34:44,576] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:51,643] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:34:51,644] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:34:51,846] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:34:51,936] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:52,146] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:34:52,147] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:52,147] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan]]]
+[2025-06-23 14:34:52,148] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:52,151] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:34:52,151] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:34:52,268] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:34:52,311] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:52,548] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:34:52,548] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:52,548] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan]]]
+[2025-06-23 14:34:52,549] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:56,359] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/cars", parameters={}
+[2025-06-23 14:34:56,359] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#createCar(CreateCarRequest)
+[2025-06-23 14:34:56,360] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateCarRequest@78dbf1ff]
+[2025-06-23 14:34:56,361] DEBUG org.hibernate.SQL - select c1_0.id from car c1_0 where c1_0.model=? limit ?
+[2025-06-23 14:34:56,578] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:57,087] DEBUG org.hibernate.SQL - select next_val as id_val from car_seq for update
+[2025-06-23 14:34:57,102] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/cars", parameters={}
+[2025-06-23 14:34:57,103] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#createCar(CreateCarRequest)
+[2025-06-23 14:34:57,104] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateCarRequest@325da15]
+[2025-06-23 14:34:57,105] DEBUG org.hibernate.SQL - select c1_0.id from car c1_0 where c1_0.model=? limit ?
+[2025-06-23 14:34:57,137] DEBUG org.hibernate.SQL - update car_seq set next_val= ? where next_val=?
+[2025-06-23 14:34:57,372] DEBUG org.hibernate.SQL - insert into car (amount,brand_id,model,price,id) values (?,?,?,?,?)
+[2025-06-23 14:34:57,397] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:57,561] INFO  com.example.order_service.service.CarServiceImpl - Thêm xe thành công
+[2025-06-23 14:34:57,564] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:57,567] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateCarResponse[model=Nissan, price=2, amount=1, brand=Nissan, country=Japannnnn]]
+[2025-06-23 14:34:57,568] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:57,572] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:34:57,572] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:34:57,712] DEBUG org.hibernate.SQL - insert into car (amount,brand_id,model,price,id) values (?,?,?,?,?)
+[2025-06-23 14:34:57,712] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:34:57,903] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:58,220] INFO  com.example.order_service.service.CarServiceImpl - Thêm xe thành công
+[2025-06-23 14:34:58,221] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:58,221] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateCarResponse[model=Nissan, price=2, amount=1, brand=Nissan, country=Japannnnn]]
+[2025-06-23 14:34:58,222] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:58,225] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:34:58,225] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:34:58,603] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:34:58,604] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:58,604] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:34:58,605] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:34:58,667] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:34:58,831] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:34:59,337] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:34:59,337] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:34:59,338] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:34:59,338] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:07,861] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/cars", parameters={}
+[2025-06-23 14:35:07,862] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#createCar(CreateCarRequest)
+[2025-06-23 14:35:07,863] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateCarRequest@7a67cd51]
+[2025-06-23 14:35:07,864] DEBUG org.hibernate.SQL - select c1_0.id from car c1_0 where c1_0.model=? limit ?
+[2025-06-23 14:35:08,420] DEBUG org.hibernate.SQL - select count(*) from brand b1_0 where b1_0.id=?
+[2025-06-23 14:35:08,789] ERROR com.example.order_service.service.CarServiceImpl - Tên xe và thương hiệu đã tồn tại
+[2025-06-23 14:35:08,790] DEBUG org.springframework.web.servlet.DispatcherServlet - Failed to complete request: java.lang.RuntimeException: Car with this model and brand already exists
+[2025-06-23 14:35:08,791] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Car with this model and brand already exists] with root cause
+java.lang.RuntimeException: Car with this model and brand already exists
+	at com.example.order_service.service.CarServiceImpl.createCar(CarServiceImpl.java:46) ~[classes/:?]
+	at com.example.order_service.controller.CarController.createCar(CarController.java:43) ~[classes/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.41.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.7.jar:6.2.7]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.41.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.7.jar:6.2.7]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.41.jar:10.1.41]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[2025-06-23 14:35:08,792] DEBUG org.springframework.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+[2025-06-23 14:35:08,793] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+[2025-06-23 14:35:08,794] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:08,794] DEBUG org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor - Writing [{timestamp=Mon Jun 23 14:35:08 ICT 2025, status=500, error=Internal Server Error, trace=java.lang.Ru (truncated)...]
+[2025-06-23 14:35:08,795] DEBUG org.springframework.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+[2025-06-23 14:35:25,581] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/cars", parameters={}
+[2025-06-23 14:35:25,581] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#createCar(CreateCarRequest)
+[2025-06-23 14:35:25,582] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateCarRequest@2e0c8c26]
+[2025-06-23 14:35:25,584] DEBUG org.hibernate.SQL - select c1_0.id from car c1_0 where c1_0.model=? limit ?
+[2025-06-23 14:35:25,825] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:35:26,560] DEBUG org.hibernate.SQL - insert into car (amount,brand_id,model,price,id) values (?,?,?,?,?)
+[2025-06-23 14:35:27,114] INFO  com.example.order_service.service.CarServiceImpl - Thêm xe thành công
+[2025-06-23 14:35:27,114] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:27,114] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateCarResponse[model=Nissann, price=2, amount=1, brand=Nissan, country=Japannnnn]]
+[2025-06-23 14:35:27,115] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:27,119] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:35:27,119] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:35:27,708] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:35:27,790] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:35:28,130] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:35:28,131] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:28,131] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:35:28,132] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:32,031] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:35:32,033] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:35:32,302] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:35:32,661] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:35:32,662] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:32,662] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:35:32,663] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:32,664] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:35:32,665] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:35:32,765] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/rentals", parameters={}
+[2025-06-23 14:35:32,765] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.RentalController#getRentals()
+[2025-06-23 14:35:32,765] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:35:32,766] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:35:32,766] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:32,766] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:32,788] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:35:33,161] DEBUG org.hibernate.SQL - select r1_0.id,r1_0.car_id,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price,r1_0.user_id from rental r1_0
+[2025-06-23 14:35:33,161] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:33,161] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:35:33,241] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:35:33,242] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:35:33,242] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:33,242] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:35:33,243] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:33,737] INFO  com.example.order_service.service.RentalServiceImpl - Lấy danh sách các mục cho thuê thành công
+[2025-06-23 14:35:33,738] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:33,738] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:33,738] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:35:33,740] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:33,741] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/rentals", parameters={}
+[2025-06-23 14:35:33,742] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.RentalController#getRentals()
+[2025-06-23 14:35:33,879] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:35:33,880] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:33,880] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:33,880] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:33,880] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=1, username=ffff, rentalDTOS=[]]]]
+[2025-06-23 14:35:33,880] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:35:33,881] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:33,881] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:33,883] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:35:33,883] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:33,883] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:35:33,883] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:34,061] DEBUG org.hibernate.SQL - select r1_0.id,r1_0.car_id,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price,r1_0.user_id from rental r1_0
+[2025-06-23 14:35:34,200] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:35:34,200] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:34,272] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:35:34,590] INFO  com.example.order_service.service.RentalServiceImpl - Lấy danh sách các mục cho thuê thành công
+[2025-06-23 14:35:34,590] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:34,591] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:35:34,591] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:35,084] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:35,181] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:35:35,182] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:35,182] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:35,182] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:35,182] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:35:35,182] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=1, username=ffff, rentalDTOS=[]]]]
+[2025-06-23 14:35:35,183] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:35,183] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:35,185] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:35,185] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:35,616] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:37,111] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:37,895] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:37,895] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:37,895] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=1, username=ffff, rentalDTOS=[]]]]
+[2025-06-23 14:35:37,896] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:37,898] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:37,898] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:38,687] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:39,737] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:39,802] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:39,803] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:39,803] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=1, username=ffff, rentalDTOS=[]]]]
+[2025-06-23 14:35:39,804] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:42,207] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/users", parameters={}
+[2025-06-23 14:35:42,207] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#createUser(CreateUserRequest)
+[2025-06-23 14:35:42,209] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateUserRequest@23ca7f28]
+[2025-06-23 14:35:42,211] DEBUG org.hibernate.SQL - select u1_0.id from user u1_0 where u1_0.user_name=? limit ?
+[2025-06-23 14:35:43,908] DEBUG org.hibernate.SQL - select next_val as id_val from user_seq for update
+[2025-06-23 14:35:44,102] DEBUG org.hibernate.SQL - update user_seq set next_val= ? where next_val=?
+[2025-06-23 14:35:44,681] DEBUG org.hibernate.SQL - insert into user (password,user_name,id) values (?,?,?)
+[2025-06-23 14:35:44,948] INFO  com.example.order_service.service.UserServiceImpl - Tạo người dùng thành công
+[2025-06-23 14:35:44,948] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:44,949] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateUserResponse[userName=aaa]]
+[2025-06-23 14:35:44,950] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:44,953] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:44,954] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:45,096] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:45,735] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:45,847] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:45,902] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:45,902] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:45,903] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=1, username=ffff, rentalDTOS=[]], GetUserResponse[id=2, username=aaa, rentalDTOS (truncated)...]
+[2025-06-23 14:35:45,903] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:49,238] DEBUG org.springframework.web.servlet.DispatcherServlet - OPTIONS "/api/v1/users/1", parameters={}
+[2025-06-23 14:35:49,240] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#deleteUser(int)
+[2025-06-23 14:35:49,240] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:49,255] DEBUG org.springframework.web.servlet.DispatcherServlet - DELETE "/api/v1/users/1", parameters={}
+[2025-06-23 14:35:49,256] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#deleteUser(int)
+[2025-06-23 14:35:50,353] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0 where u1_0.id=?
+[2025-06-23 14:35:51,440] DEBUG org.hibernate.SQL - delete from user where id=?
+[2025-06-23 14:35:51,721] INFO  com.example.order_service.service.UserServiceImpl - Xoá thành công người dùng có ID: 1
+[2025-06-23 14:35:51,722] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:51,723] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
+[2025-06-23 14:35:51,723] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:51,727] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:51,727] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:52,009] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:52,310] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:35:52,363] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:52,364] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:52,364] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=2, username=aaa, rentalDTOS=[]]]]
+[2025-06-23 14:35:52,365] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:54,543] DEBUG org.springframework.web.servlet.DispatcherServlet - OPTIONS "/api/v1/users/2", parameters={}
+[2025-06-23 14:35:54,543] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#deleteUser(int)
+[2025-06-23 14:35:54,544] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:54,547] DEBUG org.springframework.web.servlet.DispatcherServlet - DELETE "/api/v1/users/2", parameters={}
+[2025-06-23 14:35:54,547] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#deleteUser(int)
+[2025-06-23 14:35:54,793] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0 where u1_0.id=?
+[2025-06-23 14:35:55,177] DEBUG org.hibernate.SQL - delete from user where id=?
+[2025-06-23 14:35:55,471] INFO  com.example.order_service.service.UserServiceImpl - Xoá thành công người dùng có ID: 2
+[2025-06-23 14:35:55,471] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:55,471] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
+[2025-06-23 14:35:55,472] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:35:55,475] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:35:55,476] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:35:55,760] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:35:56,200] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:35:56,200] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:35:56,201] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:35:56,202] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:37:31,495] DEBUG org.springframework.web.servlet.DispatcherServlet - POST "/api/v1/users", parameters={}
+[2025-06-23 14:37:31,495] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#createUser(CreateUserRequest)
+[2025-06-23 14:37:31,497] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.order_service.dto.request.CreateUserRequest@64e6e22]
+[2025-06-23 14:37:31,499] DEBUG org.hibernate.SQL - select u1_0.id from user u1_0 where u1_0.user_name=? limit ?
+[2025-06-23 14:37:31,669] DEBUG org.hibernate.SQL - insert into user (password,user_name,id) values (?,?,?)
+[2025-06-23 14:37:31,849] INFO  com.example.order_service.service.UserServiceImpl - Tạo người dùng thành công
+[2025-06-23 14:37:31,850] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:37:31,850] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [CreateUserResponse[userName=Phạm Hồng phúc]]
+[2025-06-23 14:37:31,851] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:37:31,854] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:37:31,854] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:37:32,049] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:37:32,302] DEBUG org.hibernate.SQL - select r1_0.user_id,r1_0.id,c1_0.id,c1_0.amount,b1_0.id,b1_0.country,b1_0.name,c1_0.model,c1_0.price,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price from rental r1_0 left join car c1_0 on c1_0.id=r1_0.car_id left join brand b1_0 on b1_0.id=c1_0.brand_id where r1_0.user_id=?
+[2025-06-23 14:37:32,355] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:37:32,356] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:37:32,356] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetUserResponse[id=3, username=Phạm Hồng phúc, rentalDTOS=[]]]]
+[2025-06-23 14:37:32,357] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:37:37,074] DEBUG org.springframework.web.servlet.DispatcherServlet - OPTIONS "/api/v1/users/3", parameters={}
+[2025-06-23 14:37:37,074] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#deleteUser(int)
+[2025-06-23 14:37:37,075] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:37:37,077] DEBUG org.springframework.web.servlet.DispatcherServlet - DELETE "/api/v1/users/3", parameters={}
+[2025-06-23 14:37:37,078] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#deleteUser(int)
+[2025-06-23 14:37:37,241] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0 where u1_0.id=?
+[2025-06-23 14:37:37,588] DEBUG org.hibernate.SQL - delete from user where id=?
+[2025-06-23 14:37:37,800] INFO  com.example.order_service.service.UserServiceImpl - Xoá thành công người dùng có ID: 3
+[2025-06-23 14:37:37,801] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:37:37,801] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
+[2025-06-23 14:37:37,801] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:37:37,806] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:37:37,806] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:37:38,016] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:37:38,310] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:37:38,311] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:37:38,311] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:37:38,313] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:38:30,953] WARN  com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@45404888 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+[2025-06-23 14:40:20,018] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:40:20,019] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:40:20,662] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:40:21,029] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:40:21,030] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:21,030] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:40:21,031] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:21,032] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/brands", parameters={}
+[2025-06-23 14:40:21,032] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.BrandController#getBrands()
+[2025-06-23 14:40:21,223] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0
+[2025-06-23 14:40:21,554] INFO  com.example.order_service.service.BrandServiceImpl - Lấy thông tin danh sách các thương hiệu thành công
+[2025-06-23 14:40:21,555] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:21,555] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetBrandResponse[id=54, name=Nissan, country=Japannnnn], GetBrandResponse[id=55, name=Nissan, count (truncated)...]
+[2025-06-23 14:40:21,556] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:22,524] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/rentals", parameters={}
+[2025-06-23 14:40:22,524] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:40:22,524] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.RentalController#getRentals()
+[2025-06-23 14:40:22,524] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:40:22,524] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:40:22,524] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:40:22,809] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:40:22,809] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:40:22,809] DEBUG org.hibernate.SQL - select r1_0.id,r1_0.car_id,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price,r1_0.user_id from rental r1_0
+[2025-06-23 14:40:22,867] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:40:23,248] INFO  com.example.order_service.service.RentalServiceImpl - Lấy danh sách các mục cho thuê thành công
+[2025-06-23 14:40:23,248] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:40:23,249] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:23,249] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:23,249] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:40:23,249] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:40:23,249] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:23,249] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:23,250] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/rentals", parameters={}
+[2025-06-23 14:40:23,250] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/users", parameters={}
+[2025-06-23 14:40:23,251] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.RentalController#getRentals()
+[2025-06-23 14:40:23,251] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.UserController#getUsers()
+[2025-06-23 14:40:23,310] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:40:23,310] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:23,311] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:40:23,311] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:23,313] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:40:23,313] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:40:23,372] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.password,u1_0.user_name from user u1_0
+[2025-06-23 14:40:23,372] DEBUG org.hibernate.SQL - select r1_0.id,r1_0.car_id,r1_0.rental_date,r1_0.rental_days,r1_0.return_date,r1_0.total_price,r1_0.user_id from rental r1_0
+[2025-06-23 14:40:23,482] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:40:23,533] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:40:23,677] INFO  com.example.order_service.service.RentalServiceImpl - Lấy danh sách các mục cho thuê thành công
+[2025-06-23 14:40:23,678] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:23,678] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:40:23,678] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:23,764] INFO  com.example.order_service.service.UserServiceImpl - Lấy danh sách người dùng thành công
+[2025-06-23 14:40:23,765] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:23,765] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[]]
+[2025-06-23 14:40:23,766] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:23,869] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:40:23,870] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:23,870] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:40:23,871] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:27,270] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:40:27,271] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:40:27,633] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:40:27,684] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:40:28,090] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:40:28,091] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:28,091] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:40:28,092] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:28,093] DEBUG org.springframework.web.servlet.DispatcherServlet - GET "/api/v1/cars", parameters={}
+[2025-06-23 14:40:28,093] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.example.order_service.controller.CarController#getCars()
+[2025-06-23 14:40:28,289] DEBUG org.hibernate.SQL - select c1_0.id,c1_0.amount,c1_0.brand_id,c1_0.model,c1_0.price from car c1_0
+[2025-06-23 14:40:28,333] DEBUG org.hibernate.SQL - select b1_0.id,b1_0.country,b1_0.name from brand b1_0 where b1_0.id=?
+[2025-06-23 14:40:28,676] INFO  com.example.order_service.service.CarServiceImpl - Xem thông tin danh sách xe thành công
+[2025-06-23 14:40:28,677] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+[2025-06-23 14:40:28,677] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[GetCarResponse[id=3, model=hondaaaa, price=3, amount=2, brand=Nissan], GetCarResponse[id=52, model= (truncated)...]
+[2025-06-23 14:40:28,678] DEBUG org.springframework.web.servlet.DispatcherServlet - Completed 200 OK
+[2025-06-23 14:40:43,260] DEBUG org.springframework.boot.availability.ApplicationAvailabilityBean - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[2025-06-23 14:40:43,261] DEBUG org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@453ef474, started on Mon Jun 23 14:29:57 ICT 2025
+[2025-06-23 14:40:43,263] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+[2025-06-23 14:40:43,274] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+[2025-06-23 14:40:43,277] INFO  org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2025-06-23 14:40:43,280] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2025-06-23 14:40:43,342] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

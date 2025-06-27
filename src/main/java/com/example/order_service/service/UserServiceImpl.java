@@ -6,6 +6,7 @@ import com.example.order_service.dto.response.CreateUserResponse;
 import com.example.order_service.dto.response.GetUserResponse;
 import com.example.order_service.dto.response.RentalDTO;
 import com.example.order_service.entities.Rental;
+import com.example.order_service.entities.USER_ROLE;
 import com.example.order_service.entities.User;
 import com.example.order_service.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -45,7 +46,7 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setUserName(userRequest.getUserName());
         user.setPassword(userRequest.getPassword());
-
+        user.setRole(USER_ROLE.ROLE_CUSTOMER);
         userRepository.save(user);
         LOG.info("Tạo người dùng thành công");
 
@@ -74,7 +75,7 @@ public class UserServiceImpl implements UserService {
                         rental.getTotalPrice()
                 ));
             }
-            userResponses.add(new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS));
+            userResponses.add(new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS, user.getRole()));
         }
 
         LOG.info("Lấy danh sách người dùng thành công");
@@ -107,7 +108,30 @@ public class UserServiceImpl implements UserService {
         }
 
         LOG.info("Lấy người dùng có ID: {} thành công", id);
-        return new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS);
+        return new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS, user.getRole());
+    }
+
+    @Override
+    public GetUserResponse getUser(String userName) {
+        User user = userRepository.findByUserName(userName).orElseThrow(() -> {
+            LOG.error("Không tồn tại người dùng có userName: {}", userName);
+            return new RuntimeException("Không tồn tại người dùng");
+        });
+
+        List<RentalDTO> rentalDTOS = new ArrayList<>();
+        for (Rental rental : user.getRentals()) {
+            rentalDTOS.add(new RentalDTO(
+                    rental.getId(),
+                    rental.getCar().getModel(),
+                    rental.getRentalDate(),
+                    rental.getRentalDays(),
+                    rental.getReturnDate(),
+                    rental.getTotalPrice()
+            ));
+        }
+
+        LOG.info("Lấy người dùng có userName: {} thành công", userName);
+        return new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS, user.getRole());
     }
 
     /**
