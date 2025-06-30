@@ -9,14 +9,20 @@ import com.example.order_service.entities.Rental;
 import com.example.order_service.entities.USER_ROLE;
 import com.example.order_service.entities.User;
 import com.example.order_service.repository.UserRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Triển khai các nghiệp vụ xử lý liên quan đến người dùng (User).
@@ -30,6 +36,12 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private RedisService redisService;
+
+    @Autowired
+    private CacheManager cacheManager;
 
     /**
      * Tạo mới một người dùng nếu chưa tồn tại username.
@@ -49,7 +61,7 @@ public class UserServiceImpl implements UserService {
         user.setRole(USER_ROLE.ROLE_CUSTOMER);
         userRepository.save(user);
         LOG.info("Tạo người dùng thành công");
-
+        redisService.delete("users:all");
         return new CreateUserResponse(user.getUserName());
     }
 
@@ -60,9 +72,19 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public List<GetUserResponse> getUsers() {
+        String cacheKey = "users:all";
+        long start = System.currentTimeMillis();
+        List<GetUserResponse> cached = redisService.get(cacheKey, new TypeReference<List<GetUserResponse>>() {
+        });
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy danh sách người dùng từ redis cache");
+            LOG.info("Duration (cache): {} ms", end - start);
+            return cached;
+        }
+
         List<User> users = userRepository.findAll();
         List<GetUserResponse> userResponses = new ArrayList<>();
-
         for (User user : users) {
             List<RentalDTO> rentalDTOS = new ArrayList<>();
             for (Rental rental : user.getRentals()) {
@@ -77,8 +99,11 @@ public class UserServiceImpl implements UserService {
             }
             userResponses.add(new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS, user.getRole()));
         }
-
-        LOG.info("Lấy danh sách người dùng thành công");
+        LOG.info("Lấy danh sách người dùng từ DB");
+        long end = System.currentTimeMillis();
+        LOG.info("Duration (no cache): {} ms", end - start);
+        redisService.save(cacheKey, userResponses, 10, TimeUnit.MINUTES);
+        LOG.info("Lưu danh sách người dùng vào Redis cache");
         return userResponses;
     }
 
@@ -94,7 +119,15 @@ public class UserServiceImpl implements UserService {
             LOG.error("Không tồn tại người dùng có ID: {}", id);
             return new RuntimeException("Không tồn tại người dùng");
         });
-
+        long start = System.currentTimeMillis();
+        String keyCache = "user:" + id;
+        GetUserResponse cached = redisService.get(keyCache, GetUserResponse.class);
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy người dùng có ID: {} từ Redis", id);
+            LOG.info("Duration (cache): {} ms", end - start);
+            return cached;
+        }
         List<RentalDTO> rentalDTOS = new ArrayList<>();
         for (Rental rental : user.getRentals()) {
             rentalDTOS.add(new RentalDTO(
@@ -106,8 +139,10 @@ public class UserServiceImpl implements UserService {
                     rental.getTotalPrice()
             ));
         }
-
-        LOG.info("Lấy người dùng có ID: {} thành công", id);
+        long end = System.currentTimeMillis();
+        LOG.info("Lấy người dùng có ID: {} thành công từ DB", id);
+        LOG.info("Duration (no cache): {} ms", end - start);
+        redisService.save(keyCache, new GetUserResponse(), 10, TimeUnit.MINUTES);
         return new GetUserResponse(user.getId(), user.getUserName(), rentalDTOS, user.getRole());
     }
 
@@ -140,6 +175,7 @@ public class UserServiceImpl implements UserService {
      * @param request thông tin cần cập nhật
      * @param id      ID người dùng cần cập nhật
      */
+
     @Override
     public void updateUser(UpdateUserRequest request, int id) {
         User user = userRepository.findById(id).orElseThrow(() -> {
@@ -152,6 +188,9 @@ public class UserServiceImpl implements UserService {
 
         userRepository.save(user);
         LOG.info("Cập nhật người dùng có ID: {} thành công", id);
+
+        redisService.delete("users:all");
+        redisService.delete("user:" + id);
     }
 
     /**
@@ -168,5 +207,8 @@ public class UserServiceImpl implements UserService {
 
         userRepository.delete(user);
         LOG.info("Xoá thành công người dùng có ID: {}", id);
+        redisService.delete("users:all");
+        redisService.delete("user:" + id);
     }
+
 }

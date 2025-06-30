@@ -8,14 +8,17 @@ import com.example.order_service.entities.User;
 import com.example.order_service.repository.CarRepository;
 import com.example.order_service.repository.RentalRepository;
 import com.example.order_service.repository.UserRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Triển khai các nghiệp vụ liên quan đến việc thuê xe (rental).
@@ -27,6 +30,8 @@ public class RentalServiceImpl implements RentalService {
 
     private static final Logger LOG = LogManager.getLogger();
 
+    @Autowired
+    private RedisService redisService;
     private final UserRepository userRepository;
     private final CarRepository carRepository;
     private final RentalRepository rentalRepository;
@@ -44,9 +49,19 @@ public class RentalServiceImpl implements RentalService {
             return new RuntimeException("Rental not found");
         });
 
+        String cacheKey = "rental:" + id;
+        long start = System.currentTimeMillis();
+
+        GetRentalResponse cached = redisService.get(cacheKey, GetRentalResponse.class);
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy lượt thuê có ID: {} từ redis thành công", id);
+            LOG.info("Duration (cache): {} ms ", end - start);
+            return cached;
+        }
         LOG.info("Lấy thông tin lượt thuê ID: {} thành công", id);
 
-        return new GetRentalResponse(
+        GetRentalResponse response =  new GetRentalResponse(
                 rental.getId(),
                 rental.getRentalDate(),
                 rental.getRentalDays(),
@@ -55,6 +70,11 @@ public class RentalServiceImpl implements RentalService {
                 rental.getCar().getModel(),
                 rental.getTotalPrice()
         );
+        long end = System.currentTimeMillis();
+        LOG.info("Xem thông tin lượt thuê với ID: {} thành công từ DB", id);
+        LOG.info("Duration (cache): {} ms ", end - start);
+        redisService.save(cacheKey, response, 10, TimeUnit.HOURS);
+        return response;
     }
 
     /**
@@ -64,6 +84,17 @@ public class RentalServiceImpl implements RentalService {
      */
     @Override
     public List<GetRentalResponse> getRentals() {
+        String cacheKey = "rentals:all";
+        long start = System.currentTimeMillis();
+
+        List<GetRentalResponse> cached = redisService.get(cacheKey, new TypeReference<List<GetRentalResponse>>() {
+        });
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy lượt thuê xe từ redis thành công");
+            LOG.info("Duration (cache): {} ms ", end - start);
+            return cached;
+        }
         List<Rental> rentals = rentalRepository.findAll();
         List<GetRentalResponse> getRentalResponses = new ArrayList<>();
 
@@ -80,6 +111,9 @@ public class RentalServiceImpl implements RentalService {
         }
 
         LOG.info("Lấy danh sách các mục cho thuê thành công");
+        long end = System.currentTimeMillis();
+        LOG.info("Duration (cache): {} ms ", end - start);
+        redisService.save(cacheKey, getRentalResponses, 10, TimeUnit.HOURS);
         return getRentalResponses;
     }
 
@@ -124,7 +158,7 @@ public class RentalServiceImpl implements RentalService {
         // Giảm số lượng xe còn lại sau khi thuê
         car.setAmount(car.getAmount() - 1);
         carRepository.save(car);
-
         LOG.info("Thuê xe thành công cho người dùng ID: {}, xe ID: {}", user.getId(), car.getId());
+        redisService.delete("rentals:all");
     }
 }

@@ -6,14 +6,17 @@ import com.example.order_service.dto.response.CreateBrandResponse;
 import com.example.order_service.dto.response.GetBrandResponse;
 import com.example.order_service.entities.Brand;
 import com.example.order_service.repository.BrandRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Triển khai các nghiệp vụ xử lý liên quan đến Brand (hãng xe).
@@ -24,6 +27,9 @@ import java.util.List;
 public class BrandServiceImpl implements BrandService {
 
     private static final Logger LOG = LogManager.getLogger(BrandServiceImpl.class);
+
+    @Autowired
+    private RedisService redisService;
 
     @Autowired
     private BrandRepository brandRepository;
@@ -47,7 +53,9 @@ public class BrandServiceImpl implements BrandService {
 
         brandRepository.save(brand);
         LOG.info("Thêm thương hiệu {} của quốc gia {} thành công", request.getName(), request.getCountry());
-        return new CreateBrandResponse(brand.getName(), brand.getCountry());
+        CreateBrandResponse response = new CreateBrandResponse(brand.getName(), brand.getCountry());
+        redisService.delete("brands:all");
+        return response;
     }
 
     /**
@@ -69,6 +77,8 @@ public class BrandServiceImpl implements BrandService {
 
         brandRepository.save(brand);
         LOG.info("Cập nhật thương hiệu thành công");
+        redisService.delete("brands:all");
+        redisService.delete("brand" + id);
         return brand;
     }
 
@@ -84,8 +94,22 @@ public class BrandServiceImpl implements BrandService {
             LOG.error("Không tìm thấy thương hiệu có ID: {}", id);
             return new RuntimeException("Không tìm thấy thương hiệu");
         });
+
+        String cacheKey = "brand:" + id;
+        long start = System.currentTimeMillis();
+
+        GetBrandResponse cached = redisService.get(cacheKey, GetBrandResponse.class);
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy thông tin thương hiệu có ID: {} thành công từ Redis", id);
+            LOG.info("Duration (cache): {} ms", end - start);
+            return cached;
+        }
+
         LOG.info("Lấy thông tin thương hiệu thành công");
-        return new GetBrandResponse(brand.getId(), brand.getName(), brand.getCountry());
+        GetBrandResponse response = new GetBrandResponse(brand.getId(), brand.getName(), brand.getCountry());
+        redisService.save(cacheKey, response, 10, TimeUnit.HOURS);
+        return response;
     }
 
     /**
@@ -95,12 +119,25 @@ public class BrandServiceImpl implements BrandService {
      */
     @Override
     public List<GetBrandResponse> getBrands() {
+        String cacheKey = "brands:all";
+        long start = System.currentTimeMillis();
+
+        List<GetBrandResponse> cached = redisService.get(cacheKey, new TypeReference<List<GetBrandResponse>>() {
+        });
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy thông tin danh sách thương hiệu từ Redis thành công");
+            LOG.info("Duration (cache): {} ms ", end - start);
+        }
         List<GetBrandResponse> getBrandResponses = new ArrayList<>();
         List<Brand> brands = brandRepository.findAll();
         for (Brand brand : brands) {
             getBrandResponses.add(new GetBrandResponse(brand.getId(), brand.getName(), brand.getCountry()));
         }
-        LOG.info("Lấy thông tin danh sách các thương hiệu thành công");
+        LOG.info("Lấy thông tin danh sách các thương hiệu thành công từ DB");
+        long end = System.currentTimeMillis();
+        LOG.info("Duration (no cache): {} ms", end - start);
+        redisService.save(cacheKey, getBrandResponses, 10, TimeUnit.HOURS);
         return getBrandResponses;
     }
 
@@ -117,5 +154,6 @@ public class BrandServiceImpl implements BrandService {
         });
         brandRepository.delete(brand);
         LOG.info("Xoá thương hiệu có ID: {} thành công", id);
+        redisService.delete("brand:" + id);
     }
 }

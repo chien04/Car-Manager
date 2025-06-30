@@ -8,6 +8,7 @@ import com.example.order_service.entities.Brand;
 import com.example.order_service.entities.Car;
 import com.example.order_service.repository.BrandRepository;
 import com.example.order_service.repository.CarRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Triển khai các nghiệp vụ liên quan đến Car (xe).
@@ -26,6 +28,9 @@ import java.util.List;
 public class CarServiceImpl implements CarService {
 
     private static final Logger LOG = LogManager.getLogger(CarServiceImpl.class);
+
+    @Autowired
+    RedisService redisService;
 
     @Autowired
     CarRepository carRepository;
@@ -58,15 +63,16 @@ public class CarServiceImpl implements CarService {
         car.setBrand(brand);
 
         carRepository.save(car);
-        LOG.info("Thêm xe thành công");
-
-        return new CreateCarResponse(
+        CreateCarResponse response = new CreateCarResponse(
                 car.getModel(),
                 car.getPrice(),
                 car.getAmount(),
                 car.getBrand().getName(),
                 car.getBrand().getCountry()
         );
+        LOG.info("Thêm xe thành công");
+        redisService.delete("cars:all");
+        return response;
     }
 
     /**
@@ -82,14 +88,30 @@ public class CarServiceImpl implements CarService {
             return new RuntimeException("Car not found");
         });
 
-        LOG.info("Xem thông tin xe với ID: {} thành công", id);
-        return new GetCarResponse(
+        String cacheKey = "car:" + id;
+        long start = System.currentTimeMillis();
+
+        GetCarResponse cached = redisService.get(cacheKey, GetCarResponse.class);
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy xe có ID: {} từ redis thành công", id);
+            LOG.info("Duration (cache): {} ms ", end - start);
+            return cached;
+        }
+
+
+        GetCarResponse response =  new GetCarResponse(
                 car.getId(),
                 car.getModel(),
                 car.getPrice(),
                 car.getAmount(),
                 car.getBrand().getName()
         );
+        long end = System.currentTimeMillis();
+        LOG.info("Xem thông tin xe với ID: {} thành công", id);
+        LOG.info("Duration (cache): {} ms ", end - start);
+        redisService.save(cacheKey, response, 10, TimeUnit.HOURS);
+        return response;
     }
 
     /**
@@ -99,6 +121,18 @@ public class CarServiceImpl implements CarService {
      */
     @Override
     public List<GetCarResponse> getCars() {
+
+        String cacheKey = "cars:all";
+        long start = System.currentTimeMillis();
+
+        List<GetCarResponse> cached = redisService.get(cacheKey, new TypeReference<List<GetCarResponse>>() {
+        });
+        if(cached != null) {
+            long end = System.currentTimeMillis();
+            LOG.info("Lấy thông tin danh sách người dùng thành công từ Redis");
+            LOG.info("Duration (cache): {} ms", end - start);
+            return cached;
+        }
         List<Car> cars = carRepository.findAll();
         List<GetCarResponse> getCarResponses = new ArrayList<>();
 
@@ -112,7 +146,10 @@ public class CarServiceImpl implements CarService {
             ));
         }
 
-        LOG.info("Xem thông tin danh sách xe thành công");
+        long end = System.currentTimeMillis();
+        LOG.info("Xem thông tin danh sách xe thành công từ DB");
+        LOG.info("Duration (no cache): {} ms", end - start);
+        redisService.save(cacheKey, getCarResponses, 10, TimeUnit.HOURS);
         return getCarResponses;
     }
 
@@ -130,6 +167,8 @@ public class CarServiceImpl implements CarService {
 
         carRepository.delete(car);
         LOG.info("Xoá xe có ID: {} thành công", id);
+        redisService.delete("cars:all");
+        redisService.delete("car:" + id);
     }
 
     /**
@@ -155,5 +194,7 @@ public class CarServiceImpl implements CarService {
 
         carRepository.save(car);
         LOG.info("Cập nhật xe có ID: {} thành công", id);
+        redisService.delete("cars:all");
+        redisService.delete("car:" + id);
     }
 }
